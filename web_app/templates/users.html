@@ -8,20 +8,19 @@
 <body>
 
 
-    <h1>Books Page</h1>
-    <h2>Subheading</h2>
+    <h1>Users Page</h1>
 
     <p>{{ message }}</p>
 
-    {% if books %}
+    {% if users %}
         <ul>
-        {% for book in books %}
-            <li>{{ book.title }}</li>
+        {% for user in users %}
+            <li>{{ user.username }}</li>
         {% endfor %}
         </ul>
 
     {% else %}
-        <p>Books not found.</p>
+        <p>No users found.</p>
     {% endif %}
 
 

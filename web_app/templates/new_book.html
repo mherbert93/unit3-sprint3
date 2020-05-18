@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
 
@@ -10,10 +11,11 @@
 
     <p>Please fill out the form below to add a new book to the database:</p>
 
+
     <form action="/books/create" method="POST">
 
         <label>Title:</label>
-        <input type="text" name="title" placeholder="Book XYZ" value="Book XYZ">
+        <input type="text" name="book_title" placeholder="Book XYZ" value="Book XYZ">
 
         <label>Author:</label>
         <select name="author_name">
@@ -24,6 +26,12 @@
 
         <button>Submit</button>
     </form>
+
+
+
+
+
+
 
 </body>
 </html>
