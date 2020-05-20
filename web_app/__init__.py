@@ -9,11 +9,15 @@ from web_app.routes.twitter_routes import twitter_routes
 #DATABASE_URI = "sqlite:////Users/Username/Desktop/your-repo-name/web_app_99.db" # using absolute filepath on Mac (recommended)
 DATABASE_URI = "sqlite:///C:\\Users\\User\\PycharmProjects\\LambdaAssignments\\unit3-sprint3\\unit3-sprint3\\twitoff_dev.db" # using absolute filepath on Windows (recommended) h/t: https://stackoverflow.com/a/19262231/670433
 
+SECRET_KEY = "super secret"
 
 def create_app():
     app = Flask(__name__)
 
+    app.config["SECRET_KEY"] = SECRET_KEY
+
     app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URI
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.init_app(app)
     migrate.init_app(app, db)
 

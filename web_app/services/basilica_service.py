@@ -1,5 +1,3 @@
-# web_app/services/basilica_service.py
-
 import basilica
 import os
 from dotenv import load_dotenv
@@ -8,15 +6,15 @@ load_dotenv()
 
 API_KEY = os.getenv("BASILICA_API_KEY")
 
-def basilica_api_client():
-    connection = basilica.Connection(API_KEY)
-    print(type(connection))
-    return connection
+def basilica_api():
+    connection_basilica = basilica.Connection(API_KEY)
+    print(type(connection_basilica))
+    return connection_basilica
 
 if __name__ == "__main__":
 
     print("---------")
-    connection = basilica_api_client()
+    connection = basilica_api()
 
     print("---------")
     sentence = "Hello again"
